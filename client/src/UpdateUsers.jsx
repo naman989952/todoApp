@@ -11,7 +11,7 @@ const UpdateUsers = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/getUser/${id}`)
+      .get(`http://127.0.0.1:3001/getUser/${id}`)
       .then((result) => {
         console.log(result);
         setName(result.data.name);
@@ -25,7 +25,7 @@ const UpdateUsers = () => {
     e.preventDefault();
     // const newUser = { name, email, age };
     axios
-      .put("http://localhost:3001/updateUser/" + id, { name, email, age })
+      .put("http://127.0.0.1:3001/updateUser/" + id, { name, email, age })
       .then((result) => {
         navigate("/");
         console.log(result);

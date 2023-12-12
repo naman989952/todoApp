@@ -12,7 +12,7 @@ const CreateUsers = () => {
     e.preventDefault();
     const newUser = { name, email, age };
     axios
-      .post("http://localhost:3001/createUser", newUser)
+      .post("http://127.0.0.1:3001/createUser", newUser)
       .then((result) => {
         navigate("/");
         console.log(result);

@@ -9,7 +9,7 @@ const Users = () => {
     // Fetch users
 
     axios
-      .get("http://localhost:3001/")
+      .get("http://127.0.0.1:3001/")
       .then((response) => {
         setUsers(response?.data);
         console.log("Users:", response.data);
@@ -21,7 +21,7 @@ const Users = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3001/deleteUser/${id}`)
+      .delete(`http://127.0.0.1:3001/deleteUser/${id}`)
       .then((res) => {
         console.log(res);
         window.location.reload();
