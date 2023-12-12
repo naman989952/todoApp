@@ -8,7 +8,9 @@ app.use(cors());
 app.use(express.json());
 // const PORT = PORT || 3001;
 
+// mongoose.connect("mongodb://127.0.0.1:27017/crud");
 mongoose.connect("mongodb://127.0.0.1:27017/crud");
+
 
 // Error handler middleware
 // app.use((err, req, res, next) => {
@@ -144,10 +146,14 @@ app.delete("/deleteUser/:id", (req, res) => {
 });
 
 
-app.listen(3001, () => {
-  console.log("Server is running on port 3001");
-});
-
-// app.listen(PORT, '0.0.0.0', () => {
-//   console.log(`Server running on http://0.0.0.0:${PORT}`);
+// app.listen(3001, () => {
+//   console.log("Server is running on port 3001");
 // });
+
+
+
+const PORT = 3001; // Set your desired port number
+
+app.listen(PORT, '127.0.0.1', () => {
+  console.log(`Server is running on http://127.0.0.1:${PORT}`);
+});
