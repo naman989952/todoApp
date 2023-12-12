@@ -142,9 +142,6 @@ app.delete("/deleteUser/:id", (req, res) => {
     .catch((err) => res.status(500).json({ error: err.message }));
 });
 
-app.listen(3001, function () {
-  console.log("Example app listening on port " + 3001 + "!");
-});
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
