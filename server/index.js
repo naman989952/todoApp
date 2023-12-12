@@ -6,6 +6,7 @@ const UserModel = require("./models/Users");
 const app = express();
 app.use(cors());
 app.use(express.json());
+// const PORT = PORT || 3001;
 
 mongoose.connect("mongodb://127.0.0.1:27017/crud");
 
@@ -146,3 +147,7 @@ app.delete("/deleteUser/:id", (req, res) => {
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
 });
+
+// app.listen(PORT, '0.0.0.0', () => {
+//   console.log(`Server running on http://0.0.0.0:${PORT}`);
+// });
